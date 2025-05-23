@@ -1,0 +1,79 @@
+body {
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background image overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+  opacity: 15;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.container {
+  text-align: center;
+}
+
+.circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  position:sticky;
+}
+
+#time {
+  font-size: 24px;
+  width: 180px;
+  text-align: center;
+}
+
+.buttons button {
+  font-size: 14px;
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #555;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #777;
+}
+
+#laps {
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding-left: 20px;
+  border-top: 1px solid #ddd;
+  text-align: left;
+}
+#laps li {
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
